@@ -1,0 +1,5 @@
+#card-body-welcome{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}
