@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.urlencoded({extended:false}));
-
+app.use(express.json());
 //for all static files
 app.use(express.static('public'));
 

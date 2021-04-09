@@ -1,2 +1,17 @@
-<p>Here we will do our map and police stuff</p>
-<a href="/logout" class="btn btn-secondary">Logout</a>
+<button type="button" class="btn btn-danger" onclick="dangerAlert()">Danger</button>
+<script>
+    function dangerAlert(){
+    let cLat,cLng;
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition((position)=>{
+        cLat = position.coords.latitude;
+        cLng = position.coords.longitude;
+        window.location.replace("http://localhost:8000/danger?lat="+cLat+"&lng="+cLng);
+      });
+    }
+    else{
+        //browser doesn't support geolocation still we have to do something
+    }
+}
+</script>
+
