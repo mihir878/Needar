@@ -6,8 +6,8 @@ This is a web application to help in women's safety,to help women in case of thr
 
   
 ## Table of Contents:
-1- a user can register themselves and after they can add their relatives or friends information.
-2- in case of emergency situation user can share their location to all their relatives tapping
+1) a user can register themselves and after they can add their relatives or friends information.
+2) in case of emergency situation user can share their location to all their relatives tapping
   danger button(through email and phone nummber);
   
 ## Technology Stack:
