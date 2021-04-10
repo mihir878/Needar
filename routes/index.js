@@ -7,6 +7,7 @@ router.use('/logout',require('./logout'));
 router.use('/register',require('./register'));
 router.use('/dashboard',require('./dashboard'));
 router.use('/danger',require('./danger'));
+router.use('/addContact',require('./addContact'));
 
 router.get('/',(req,res)=>{
     res.render("welcome.ejs");

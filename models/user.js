@@ -24,7 +24,11 @@ const UserSchema =new mongoose.Schema({
     relative_email_address:{
         type: Array,
         default: [],
-    }
+    },
+    relative_names:{
+        type: Array,
+        default: [],
+    },
 }); 
 
 module.exports = new mongoose.model('User',UserSchema);
