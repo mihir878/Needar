@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //ejs as view (temprary)
-app.use(expressLayout);
+//app.use(expressLayout);
 app.set('view engine','ejs');
 
 //for routing paths

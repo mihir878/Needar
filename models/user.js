@@ -20,6 +20,10 @@ const UserSchema =new mongoose.Schema({
     relative_phone_numbers:{
         type: Array,
         default: [],
+    },
+    relative_email_address:{
+        type: Array,
+        default: [],
     }
 }); 
 
