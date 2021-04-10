@@ -17,7 +17,7 @@ router.post('/',(req,res)=>{
 
     //check password
     if(password!=password2){
-        errors.push({msg : 'password does not match'});
+        errors.push({msg : 'your password does not match'});
     }
 
     //check password length

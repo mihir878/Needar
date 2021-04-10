@@ -22,6 +22,7 @@ router.get('/', (req, res) => {
     let allPhoneNumbers;
     let allNames;
     let userName;
+    let varxx;
 
     userModel.findOne({
         email: email
@@ -104,7 +105,7 @@ router.get('/', (req, res) => {
             console.log(error);
         });
 
-    res.send("<h1>Alerts send to near by police station and your relatives<h1>");
+    res.send("<h1>Alerts send to near by police station & your relatives<h1>");
 });
 
 module.exports = router;
