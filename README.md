@@ -25,7 +25,7 @@ Team Name: Coding Fellas
 * [Kshitij Jaiswal](https://github.com/kshitijjaiswal2)
 
 ## Demo:
-<img src="/public/images/Register.jpeg" height=100px>
+<img src="./public/images/Register.jpeg" height=100px>
 <img src="UI.jpeg" height=100px>
 <img src="Screenshot.jpeg" height=100px>
 
