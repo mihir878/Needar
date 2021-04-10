@@ -24,10 +24,5 @@ Team Name: Coding Fellas
 * [Mihir Laddha](https://github.com/mihir878)
 * [Kshitij Jaiswal](https://github.com/kshitijjaiswal2)
 
-## Demo:
-<img src="./public/images/Register.jpeg" height=100px>
-<img src="UI.jpeg" height=100px>
-<img src="Screenshot.jpeg" height=100px>
-
 ### Made at:
 <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
