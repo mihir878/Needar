@@ -5,10 +5,10 @@
 This is a web application to help in women's safety,to help women in case of threatening situation.
 
 ## Demo Video Link :
-(https://drive.google.com/file/d/17WKRSkx0oeCyWVEgsNSiIh5Ov2W7ovTe/view?usp=sharing)
+https://drive.google.com/file/d/17WKRSkx0oeCyWVEgsNSiIh5Ov2W7ovTe/view?usp=sharing
 
 ## Presentation Link :
-(https://drive.google.com/file/d/1teqA9YTYIXdAEDJGsNXa3vUiSWRQwhFh/view?usp=sharing)
+https://drive.google.com/file/d/1teqA9YTYIXdAEDJGsNXa3vUiSWRQwhFh/view?usp=sharing
   
 ## Table of Contents:
 1) a user can register themselves and after they can add their relatives or friends information.

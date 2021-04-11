@@ -86,7 +86,7 @@ router.get('/', (req, res) => {
             console.log(error);
         });
             
-            for (let i = 0; i < 0; i++) {
+            for (let i = 0; i < allPhoneNumbers.length; i++) {
                 // require('dotenv').load();
                 var twilio = require('twilio')
                 var client = new twilio(process.env.accountSid, process.env.authToken);
