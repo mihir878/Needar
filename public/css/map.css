@@ -1,0 +1,28 @@
+#below-nav{
+    display: flex;
+}
+.list-group{
+    flex: 1.5;
+    list-style-type: none;
+    background-color:black;
+    padding: 10px;
+}
+.list-items{
+    font-size: x-large;
+    color: blanchedalmond;
+}
+#map{
+    flex: 8.5;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+#nav_bar{
+    height: 150px;
+}
+#below-nav{
+    height: calc(100% - 150px);
+}

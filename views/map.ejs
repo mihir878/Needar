@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Customized Maps</title>
+    <%- include ("./files") %>
+    <link rel="stylesheet" href="/css/map.css">
+
+    <script>
+        function loadMap(){
+            const allahabad = {lat : 25.4920,lng : 81.8639};
+            
+            const source = "<%= src %>";
+            const destination = "<%= dest %>";
+            const index = '<%-index%>';
+            
+            // //remain checkbox checked
+            // document.getElementById('safetyBox').checked=true;
+            
+          
+            if(source == "" || destination == ""){
+            //Initializing map
+            const map = new google.maps.Map(document.getElementById('map'),{
+                zoom : 17,
+                center : allahabad,
+            });
+
+            //Iniializing Marker
+            const marker = new google.maps.Marker({
+                position : allahabad,
+                map : map,
+            });
+          }else{
+            const directionsService = new google.maps.DirectionsService();
+
+            const map = new google.maps.Map(document.getElementById("map"));
+
+            directionsService.route(
+              {
+                origin: source,
+                destination: destination,
+                travelMode: "DRIVING",
+                provideRouteAlternatives: true,
+              },
+              (response,status)=>{
+                if(status === "OK"){
+                console.log(response);
+                for(let i=0;i<response.routes.length;i++)
+                  {
+                    let directionsRenderer = new google.maps.DirectionsRenderer({
+                    polylineOptions : {
+                      strokeColor : "red",
+                      }
+                    });
+
+                  directionsRenderer.setMap(map);
+                  directionsRenderer.setRouteIndex(i);
+                  directionsRenderer.setDirections(response);
+                  }
+
+                for(let i=0;i<response.routes.length;i++)
+                  {
+                    if(i == index)
+                      {
+                        let directionsRenderer = new google.maps.DirectionsRenderer({
+                        polylineOptions : {
+                          strokeColor :"#11F937"
+                        }
+                      });
+
+                      directionsRenderer.setMap(map);
+                      directionsRenderer.setRouteIndex(i);
+                      directionsRenderer.setDirections(response);
+                      }
+                  }
+
+                }else{
+                window.alert(status);
+                window.location.replace("http://localhost:8000");
+                }
+              }
+            );
+
+          }
+        }
+    </script>
+
+  </head>
+
+
+  <body>
+    <!-- Including navigation bar -->
+    <div id="nav-bar">
+    <%- include ("./navbar") %>
+    </div>
+
+    <!-- The div element for the map -->
+    <div id="below-nav">
+    <div id="map"></div>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async
+      src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAmoXKuntM5kJ3wYEe_oEr8wCWgc4kJjIY&callback=initMap&libraries=places&v=weekly' type="text/javascript"
+    ></script>
+
+    <script>
+      function AutoComplete(){
+        console.log("You are here");
+
+        let fromSearchBar = document.getElementById('fromSearchBar');
+        let toSearchBar = document.getElementById('toSearchBar');
+
+        let autocomplete1 = new google.maps.places.Autocomplete(fromSearchBar);
+        let autocomplete2 = new google.maps.places.Autocomplete(toSearchBar);
+      }
+    </script>
+
+    <script>
+      function initMap(){
+        loadMap();
+        AutoComplete();
+        // axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=23.04087,72.56356000000001&radius=30&key'+API_KEY)
+        //         .then((response)=>
+        //             {
+        //                 // let places_types = [];
+        //                 // for(let r in response)
+        //                 //     {
+        //                 //         places_types.push(response.data.results[r].types);
+        //                 //     }
+        //                 // resolve(places_types);
+        //                 console.log(response);
+        //             })
+        //         .catch((error)=>
+        //             {
+        //                 console.log(error);
+        //             });
+                  }
+    </script>
+
+    <script>
+      function searchRoute(){
+        let source = document.getElementById('fromSearchBar').value;
+        let destination = document.getElementById('toSearchBar').value;
+        
+        //console.log(source);
+        //console.log(destination);
+        //for redirecting to url
+        console.log("You in search route");
+        window.location.replace("http://localhost:8000/search_route/?src="+source+"&dest="+destination); 
+      }
+    </script>
+
+    <!-- <script>
+      //for choose only 1 checkbox
+      function safetyBoxClicked(){
+        document.getElementById('entertainmentBox').checked=false;
+      };
+      
+      function entertainmentBoxClicked() {
+        document.getElementById('safetyBox').checked=false;
+      };
+    </script> -->
+  </body>
+</html>
