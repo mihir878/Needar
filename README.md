@@ -11,9 +11,10 @@ https://drive.google.com/file/d/17WKRSkx0oeCyWVEgsNSiIh5Ov2W7ovTe/view?usp=shari
 https://drive.google.com/file/d/1teqA9YTYIXdAEDJGsNXa3vUiSWRQwhFh/view?usp=sharing
   
 ## Table of Contents:
-1) a user can register themselves and after they can add their relatives or friends information.
-2) in case of emergency situation user can share their location to all their relatives tapping
-  danger button(through email and phone nummber),
+1) A user can register themselves and after they can add their relatives or friends information.
+2) In case of emergency situation user can share their location to all their relatives tapping
+  danger button(through email and phone nummber).
+3) User can get safest route between two places by comparing types of places between different routes.
   
 ## Technology Stack:
 1) Node.JS
@@ -21,6 +22,7 @@ https://drive.google.com/file/d/1teqA9YTYIXdAEDJGsNXa3vUiSWRQwhFh/view?usp=shari
 3) HTML,CSS,BOOTSTRAP,JS
 4) Mailjet API
 5) Twilio API
+6) MongoDB
 
 ## Contributors:
 Team Name: Coding Fellas
